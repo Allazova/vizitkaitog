@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-визитка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="burger-menu" id="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="#intro">Обо мне</a></li>
+            <li><a href="#achievements">Достижения</a></li>
+            <li><a href="#tech">Технологии</a></li>
+            <li><a href="#feedback">Обратная связь</a></li>
+        </ul>
+    </nav>
+
+  
+    <section id="intro" class="intro-section">
+        <h1 class="intro-title">Привет! Я <span class="highlighted-name">Аллазова Айша</span> — студентка Академии Управления при Президенте Республики Беларусь</h1>
+        <img src="321.jpg" alt="Айша" class="profile-photo">
+        <a href="https://www.instagram.com/aii.allazova/" target="_blank" class="instagram-button">Мой Инстаграм</a>
+    </section>
+
+    <div id="achievements" class="section-achievements">
+        <div class="section-container">
+            <h2 class="achievements-title">Мои достижения</h2>
+            <div class="achievement-cards">
+                <div class="achievement-card">
+                    <img src="bro.PNG" alt="Достижение 1">
+                    <h3>Лучшая сестра</h3>
+                    <p>Считаю, что я самая добрая и понимающая сестра.</p>
+                </div>
+                <div class="achievement-card">
+                    <img src="family.JPEG" alt="Достижение 2">
+                    <h3> Лучшая дочь</h3>
+                    <p>Самая послушная дочь.</p>
+                </div>
+                <div class="achievement-card">
+                    <video width="300" height="400" controls autoplay>
+                        <source src="1287.mp4" type="video/mp4">
+                    </video>
+                    <h3> Лучшая модель</h3>
+                    <p>Люблю фотографироваться и путешествовать.</p>
+                </div>
+                <div class="achievement-card">
+                    <img src="cinabon.JPG" alt="Достижение 4">
+                    <h3> Лучший повар</h3>
+                    <p>Обожаю готовить, готовлю разную кухню.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="tech" class="tech-section">
+        <div class="section-container">
+            <h2 class="tech-title"><span class="highlighted-name">Технологии</span>, которыми я владею</h2>
+            <div class="tech-cards">
+                <div class="tech-card">
+                    <img src="12.jpg" alt="HTML5">
+                    <h3>HTML5</h3>
+                    <p>Основы создания веб-страниц с использованием разметки HTML5.</p>
+                </div>
+                <div class="tech-card">
+                    <img src="1200.png" alt="CSS">
+                    <h3>CSS</h3>
+                    <p>Стилизация веб-страниц с помощью CSS, включая flexbox и grid.</p>
+                </div>
+                <div class="tech-card">
+                    <img src="3.jpg" alt="JavaScript">
+                    <h3>JavaScript</h3>
+                    <p>Интерактивность и динамическое поведение веб-страниц с использованием JavaScript.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback" class="feedback-section">
+        <div class="section-container">
+            <h2 class="feedback-title">Обратная связь</h2>
+            <form action="https://getform.io/f/bwnneexa" method="POST">
+                <div>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        const burgerMenu = document.getElementById('burger-menu');
+        const navList = document.getElementById('nav-list');
+
+        burgerMenu.addEventListener('click', () => {
+            navList.classList.toggle('open');
+            burgerMenu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
